@@ -3,7 +3,8 @@ import SearchParams from "./SearchParams";
 import { StrictMode, useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Details from "./Details";
-import ThemeContext from "./ThemeContext";
+import Navbar from "./components/Navbar";
+import { ThemeContext } from "./ThemeContext";
 
 const App = () => {
   const theme = useState("darkblue");
@@ -11,6 +12,7 @@ const App = () => {
     <StrictMode>
       <ThemeContext.Provider value={theme}>
         <BrowserRouter>
+          <Navbar />
           <header>
             <Link to="/">Adopt Me!</Link>
           </header>
