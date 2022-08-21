@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const localCache = {};
 
- function useBreedList(animal) {
+export default function useBreedList(animal) {
   const [breedList, setBreedList] = useState([]);
   const [status, setStatus] = useState("unloaded");
 
@@ -30,5 +30,3 @@ const localCache = {};
 
   return [breedList, status];
 }
-
-export default useBreedList
